@@ -1,0 +1,383 @@
+/* Google Fonts - Poppins */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+::-ms-input-placeholder { /* Edge 12-18 */
+    color: rgb(192, 192, 192);
+  }
+  
+  ::placeholder {
+    color: rgb(192, 192, 192);
+  }
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(130, 106, 251);
+    background-image: url(https://img1.wsimg.com/isteam/ip/1b3e391b-8e9b-40f5-95d5-12775c932c8c/background.jpg/:/rs=w:1440,h:1440);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: auto;
+}
+
+.container{
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0 0.1);
+}
+.container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container p {
+    font-size: 0.65em;
+    color: #333;
+    font-weight: 300;
+    text-align: center;
+    padding: 0 40px;
+    margin-top: 5px;
+    flex-wrap: wrap;
+}
+.container header{
+    font-size: 2rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+}
+.container h2{
+    font-size: 0.75em;
+    color: #333;
+    font-weight: 300;
+    text-align: center;
+    padding: 0 40px;
+    margin-top: 5px;
+    flex-wrap: wrap;
+}
+.container .form{
+    margin-top: 30px;
+}
+
+.form .input-box{
+    width: 100%;
+    margin-top: 20px;
+    z-index: 99;
+}
+.selected-box input {
+    width: 100%;
+    padding: 1rem .6rem;
+    font-size: .8rem;
+    background-color: #fff;
+    border: .1rem solid transparent;
+    outline: none;
+    height: 100%;
+    margin-top: -.25%;
+    border-radius: 0;
+    
+}
+input [type="tel"]{
+    border-radius: 0 .5rem .5rem 0;
+}
+.selected-box input:focus {
+    border: .1rem solid #333;
+}
+.selected-option {
+    background-color: rgb(197, 185, 255);
+    display: flex;
+    border-radius: 6px;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    height: 100%;
+    margin-left: -1rem;
+    line-height: .8rem;
+}
+.selected-option strong {
+    font-size: .8rem;
+    color: #333;    
+}
+
+.selected-option div{
+    position: relative;
+    width: 6rem;
+    padding: 0 2.5rem 0 .5rem;
+    text-align: center;
+    cursor: pointer;
+}
+.selected-option div::after{
+    position: absolute;
+    content: "";
+    right: .9rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: .6rem;
+    height: .6rem;
+    border-right: .12rem solid #333;
+    border-bottom: .12rem solid #333;
+    transition: .2s;
+
+}
+.selected-option div.active::after{
+    transform: translateY(-50%) rotate(225deg);
+}
+.selected-box .options {
+    position: absolute;
+    top: 4rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: .5rem;
+    display: none;
+}
+.selected-box .options.active {
+    display: block;
+}
+.selected-box .options::after{
+    position: absolute;
+    content: "";
+    left: 1rem;
+    top: -1.2rem;
+
+    width: 0;
+    height: 0;
+    border: .6rem solid transparent;
+    border-bottom-color: rgb(130, 106, 251);
+}
+input.search-box {
+    background-color: rgb(197, 185, 255);
+    color: #333;
+    border-radius: .5rem .5rem 0 0;
+    padding: 1.4rem 1rem;
+}
+.selected-box ol {
+    list-style: none;
+    max-height: 20rem;
+    overflow: overlay;    
+    
+}
+.select-box ol::-webkit-scrollbar {
+    width: 0.6rem;
+}
+.selected-box ol::-webkit-scrollbar-thumb {
+    width: 0.4rem;
+    height: 3rem;
+    background-color: #ccc;
+    border-radius: .4rem;
+}
+.selected-box ol li {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.selected-box ol li.hide {
+    display: none;
+}
+
+.selected-box ol li:not(:last-child) {
+    border-bottom: .1rem solid #eee;
+}
+.selected-box ol li:hover {
+    background-color: rgb(197, 185, 255);
+}
+.selected-box ol li .country-name {
+    margin-left: .4rem;
+}
+
+.input-box label{
+    color: #333;
+}
+
+.input-box p {
+    font-size: 0.65em;
+    color: #333;
+    font-weight: 300;
+    text-align: left;
+    margin-top: 2px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.form :where(.input-box input, .select-box, .custom-select, .selected-box,.input-box textarea,.input-box .geographics,) {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #b6b6b6;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+.input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+    display: flex;
+    column-gap: 15px;
+}
+.form .gender-box {
+    margin-top: 20px;
+}
+.gender-box h3{
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.form :where(.gender-option, .gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+.form .gender{
+    column-gap: 5px;
+}
+.gender input{
+    accent-color: rgb(130, 106, 251);
+}
+.form :where(.gender input, .gender label) {
+    cursor: pointer;
+}
+.gender label{
+    color: #707070;
+}
+.address :where(input, .select-box, .custom-select, .selected-box) {
+    margin-top: 22px;
+}
+.input-box .custom-select {
+    position: relative;
+    font-family: Arial;
+}
+.input-box textarea {
+    resize: none;
+    justify-content: center;
+    align-content: center;
+}
+  
+.custom-select select {
+    display: none; /*hide original SELECT element:*/
+}
+  
+.select-selected {
+    background-color: #ffffff;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 40%;
+    right: 5%;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: rgb(88, 56, 251) transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent rgb(130, 106, 251) transparent;
+    top: 7px;
+}
+  
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+    color: #333;
+    padding: 0;
+    margin-top: 8px;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+}
+/*style items (options):*/
+.select-items {
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding-left: 20px;
+    z-index: 99;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 150px;
+    border-radius: .5rem;
+}
+  
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+  
+.select-items div:hover, .same-as-selected {
+    background-color: rgb(130, 106, 251);
+    color: #fff;
+}
+.select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1rem;
+}
+.form button{
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 30px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+    background-color: rgb(130, 106, 251);
+}
+.form button:hover{
+    background-color: rgb(88, 56, 251);
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#msg {
+    color: #61b752;
+    margin-top: -30px;
+    display: block;
+}
+/* Responsive */
+@media screen and (max-width: 500px){
+    .form .column {
+        flex-wrap: wrap;
+    }
+    .form :where(.gender-option, .gender) {
+        row-gap: 15px;
+    }
+}
